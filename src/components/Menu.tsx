@@ -1,7 +1,7 @@
 const menuItems = [
   {
     image:
-      'https://images.unsplash.com/photo-ecpu9sMce-c?auto=format&fit=crop&w=400&q=60',
+      'https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?auto=format&fit=crop&w=400&q=60',
     alt: 'Smoky Starters',
     name: 'Smoky Starters',
     description:
@@ -25,7 +25,7 @@ const menuItems = [
   },
   {
     image:
-      'https://images.unsplash.com/photo-VmGectHGVmY?auto=format&fit=crop&w=400&q=60',
+      'https://images.unsplash.com/photo-1593701461250-d7b22dfd3a77?auto=format&fit=crop&w=400&q=60',
     alt: 'Desserts',
     name: 'Desserts',
     description:
