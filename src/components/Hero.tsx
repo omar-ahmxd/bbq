@@ -48,6 +48,12 @@ export default function Hero() {
         <p className="hero-highlights">
           Unlimited Barbeque | Lavish Buffet | Live Counters | Dessert Galore
         </p>
+        <div className="hero-perfect-for">
+          <span>Family Dining</span>
+          <span>Friends & Group Gatherings</span>
+          <span>Office Outings</span>
+          <span>Birthdays & Celebrations</span>
+        </div>
         <div className="hero-cta">
           <a href="#reservations" className="btn btn-primary" onClick={(e) => handleClick(e, '#reservations')}>
             Reserve Your Table

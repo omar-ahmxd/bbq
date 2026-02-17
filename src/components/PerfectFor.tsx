@@ -7,20 +7,16 @@ const items = [
 
 export default function PerfectFor() {
   return (
-    <section className="perfect-for">
-      <div className="container">
-        <h2 className="section-subtitle">Occasions</h2>
-        <h3 className="section-title">Perfect For</h3>
-
-        <div className="perfect-for-list">
-          {items.map((item) => (
-            <div key={item.label} className="perfect-for-item">
-              <i className={item.icon}></i>
-              <p>{item.label}</p>
-            </div>
-          ))}
-        </div>
+    <div className="perfect-for-banner">
+      <span className="perfect-for-label">Perfect For</span>
+      <div className="perfect-for-strip">
+        {items.map((item) => (
+          <div key={item.label} className="perfect-for-chip">
+            <i className={item.icon}></i>
+            <span>{item.label}</span>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }

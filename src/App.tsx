@@ -8,7 +8,6 @@ import WhatWeOffer from './components/WhatWeOffer';
 import Menu from './components/Menu';
 import PricingTimings from './components/PricingTimings';
 import FAQ from './components/FAQ';
-import PerfectFor from './components/PerfectFor';
 import Gallery from './components/Gallery';
 import Reservations from './components/Reservations';
 import Contact from './components/Contact';
@@ -78,10 +77,9 @@ function App() {
       <About />
       <WhatWeOffer />
       <Menu />
+      <Gallery />
       <PricingTimings />
       <FAQ />
-      <PerfectFor />
-      <Gallery />
       <Reservations />
       <Contact />
       <Footer />

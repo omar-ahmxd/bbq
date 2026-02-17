@@ -79,65 +79,89 @@ export default function Reservations() {
   return (
     <section id="reservations" className="reservations">
       <div className="container">
-        <h2 className="section-subtitle">Book Your Experience</h2>
-        <h3 className="section-title">Reserve Your Table</h3>
-        <p className="reservation-tagline">Come Hungry. Leave Happy.</p>
+        <div className="reservation-layout">
+          <div className="reservation-info">
+            <h2 className="section-subtitle">Book Your Experience</h2>
+            <h3 className="section-title">Reserve Your Table</h3>
+            <div className="reservation-divider"></div>
+            <p className="reservation-tagline">Come Hungry. Leave Happy.</p>
+            <p className="reservation-description">
+              Experience the joy of barbeque the way it's meant to be - bold, indulgent and unforgettable.
+            </p>
+            <p className="reservation-cta-text">Reserve your table today.</p>
+            <div className="reservation-contact-info">
+              <div className="reservation-contact-item">
+                <i className="fas fa-phone"></i>
+                <span>+91 9884211666</span>
+              </div>
+              <div className="reservation-contact-item">
+                <i className="fas fa-envelope"></i>
+                <span>thebarbequelounge@gmail.com</span>
+              </div>
+              <div className="reservation-contact-item">
+                <i className="fas fa-clock"></i>
+                <span>Lunch & Dinner, All week</span>
+              </div>
+            </div>
+          </div>
 
-        <div className="reservation-container">
-          <form className="reservation-form" ref={formRef} onSubmit={handleSubmit}>
-            <div className="form-grid">
-              <div className="form-group">
-                <input type="text" id="name" name="name" required />
-                <label htmlFor="name">Full Name</label>
+          <div className="reservation-container">
+            <h4 className="form-heading">Fill in your details</h4>
+            <form className="reservation-form" ref={formRef} onSubmit={handleSubmit}>
+              <div className="form-grid">
+                <div className="form-group">
+                  <input type="text" id="name" name="name" required />
+                  <label htmlFor="name">Full Name</label>
+                </div>
+                <div className="form-group">
+                  <input type="email" id="email" name="email" required />
+                  <label htmlFor="email">Email Address</label>
+                </div>
+                <div className="form-group">
+                  <input type="tel" id="phone" name="phone" required />
+                  <label htmlFor="phone">Phone Number</label>
+                </div>
+                <div className="form-group">
+                  <input type="date" id="date" name="date" ref={dateRef} required />
+                  <label htmlFor="date" className="active">
+                    Date
+                  </label>
+                </div>
+                <div className="form-group">
+                  <input type="time" id="time" name="time" required />
+                  <label htmlFor="time" className="active">
+                    Time
+                  </label>
+                </div>
+                <div className="form-group">
+                  <select id="guests" name="guests" required>
+                    <option value="">Select Guests</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 People</option>
+                    <option value="3">3 People</option>
+                    <option value="4">4 People</option>
+                    <option value="5">5 People</option>
+                    <option value="6">6+ People</option>
+                  </select>
+                  <label htmlFor="guests" className="active">
+                    Number of Guests
+                  </label>
+                </div>
               </div>
-              <div className="form-group">
-                <input type="email" id="email" name="email" required />
-                <label htmlFor="email">Email Address</label>
+              <div className="form-group full-width">
+                <textarea id="message" name="message" rows={3}></textarea>
+                <label htmlFor="message">Special Requests</label>
               </div>
-              <div className="form-group">
-                <input type="tel" id="phone" name="phone" required />
-                <label htmlFor="phone">Phone Number</label>
-              </div>
-              <div className="form-group">
-                <input type="date" id="date" name="date" ref={dateRef} required />
-                <label htmlFor="date" className="active">
-                  Date
-                </label>
-              </div>
-              <div className="form-group">
-                <input type="time" id="time" name="time" required />
-                <label htmlFor="time" className="active">
-                  Time
-                </label>
-              </div>
-              <div className="form-group">
-                <select id="guests" name="guests" required>
-                  <option value="">Select Guests</option>
-                  <option value="1">1 Person</option>
-                  <option value="2">2 People</option>
-                  <option value="3">3 People</option>
-                  <option value="4">4 People</option>
-                  <option value="5">5 People</option>
-                  <option value="6">6+ People</option>
-                </select>
-                <label htmlFor="guests" className="active">
-                  Number of Guests
-                </label>
-              </div>
-            </div>
-            <div className="form-group full-width">
-              <textarea id="message" name="message" rows={3}></textarea>
-              <label htmlFor="message">Special Requests</label>
-            </div>
-            <button
-              type="submit"
-              className="btn btn-primary btn-submit"
-              disabled={submitState === 'sending'}
-              style={buttonStyle}
-            >
-              {buttonText}
-            </button>
-          </form>
+              <button
+                type="submit"
+                className="btn btn-primary btn-submit"
+                disabled={submitState === 'sending'}
+                style={buttonStyle}
+              >
+                {buttonText}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>
