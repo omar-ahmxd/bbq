@@ -1663,14 +1663,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .menu-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
     }
 
     /* Gallery Mobile */
     .gallery-grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 220px;
+        grid-auto-rows: auto;
     }
 
     .gallery-text-card {
@@ -1679,6 +1679,7 @@ h1, h2, h3, h4, h5, h6 {
         padding: 2.5rem 1.5rem;
         text-align: center;
         min-height: auto;
+        height: auto;
     }
 
     .gallery-heading {
@@ -1690,16 +1691,34 @@ h1, h2, h3, h4, h5, h6 {
         margin-right: auto;
     }
 
+    .gallery-item {
+        height: 250px;
+    }
+
     .gallery-item.tall {
         grid-row: span 1;
+        height: 300px;
     }
 
     .gallery-item.wide {
         grid-column: span 1;
+        height: 250px;
+    }
+
+    .gallery-overlay {
+        opacity: 1;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 50%);
+        align-items: flex-end;
+        padding-bottom: 1rem;
+    }
+
+    .gallery-item:hover img {
+        filter: none;
+        transform: none;
     }
 
     .gallery-overlay h4 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 
     /* Reservation Mobile */
@@ -1774,7 +1793,7 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .pricing-timings {
-        padding: 0 0 3rem;
+        padding: 4rem 0 3rem;
     }
 }
 
@@ -1838,6 +1857,15 @@ h1, h2, h3, h4, h5, h6 {
         height: auto;
     }
 
+    .menu-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .menu-item-image {
+        height: 180px;
+    }
+
     .menu-item-content {
         padding: 1rem;
     }
@@ -1847,6 +1875,18 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .menu-item-description {
+        font-size: 0.9rem;
+    }
+
+    .gallery-text-card {
+        padding: 2rem 1rem;
+    }
+
+    .gallery-text-body {
+        font-size: 0.85rem;
+    }
+
+    .gallery-text-promise {
         font-size: 0.9rem;
     }
 
